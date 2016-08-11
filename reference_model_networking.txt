@@ -1,7 +1,7 @@
 Basically in the computer networks we have two commonly network models.
 
 ==================================.
-OSI MODEL has 7 layers, that are: ||
+##OSI MODEL has 7 layers, that are: ||
 ________________________   _______/
 ( 7 | Application layer ||/
 ------------------------|||
@@ -31,4 +31,4 @@ ________________________   _______/
 ( 1 | Network Interface '/
 ======================='/
 
-reference link: 
+reference link: http://networking.layer-x.com/p030200-1.html
