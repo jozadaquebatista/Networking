@@ -1,0 +1,1 @@
+Basically they are a set of standards and policies, that define the way how a computer will talk to another one in a network; 
