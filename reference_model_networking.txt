@@ -1,0 +1,34 @@
+Basically in the computer networks we have two commonly network models.
+
+==================================.
+OSI MODEL has 7 layers, that are: ||
+________________________   _______/
+( 7 | Application layer ||/
+------------------------|||
+( 6 | Presentation layer|||
+------------------------|||
+( 5 | Session layer     |||
+------------------------|||
+( 4 | Transport layer   |||
+------------------------|||
+( 3 | Network layer     |||
+------------------------|||
+( 2 | Data link layer   |||
+------------------------||/
+( 1 | Physical layer   '/
+======================'/
+
+
+==================================\.
+and TCP/IP that has 4 layers:     ||
+________________________   _______/
+( 4 | Application Layer ||/
+----------------------  |||
+( 3 | Network Layer     |||
+----------------------  |||
+( 2 | Transport Layer   |||
+----------------------  ||/
+( 1 | Network Interface '/
+======================='/
+
+reference link: 
