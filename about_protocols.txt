@@ -1,0 +1,19 @@
+
+TCP/IP is not a protocol, is both protocols, TCP, and IP.
+
+some TCP/IP model protocols.
+  .____________.
+_(SOME PROTOCOLS)_
+============================================
+||Layer 4 - HTTP,HTTPS,SSH,FTP,TELNET,FTPS =
+============================================
+||Layer 3 - TCP,UDP                        =
+============================================
+||Layer 2 - IP                             =
+============================================
+||Layer 1 - PPP                            =
+============================================
+
+Basically that helps you understand how packages are build, sure there are many many more 
+networking protocols, but this sounds like enough to five you a basic understanding 
+and why of the term for example TCP/IP is used.
