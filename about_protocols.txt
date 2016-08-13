@@ -11,7 +11,7 @@ _(SOME PROTOCOLS)_
 ============================================
 ||Layer 2 - IP                             =
 ============================================
-||Layer 1 - PPP                            =
+||Layer 1 - PPP, Ethernet                            =
 ============================================
 
 Basically that helps you understand how packages are build, sure there are many many more 
