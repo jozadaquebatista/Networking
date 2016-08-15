@@ -1,0 +1,70 @@
+HELLO
+=====
+
+
+In my networking course, teacher did this question to the class:
+
+"If protocol don't send mask in IP header, so, how it know by what network this should
+pass through?"
+
+Some hours of studying, I get the answer, so lets go to understand!
+
+Basically, firstly, you have to know that mask in networking is only for LAN networks
+this do not work in package routing, so, secondly, when a host send packets over network
+and that one arrive a switch that will verify if that packet is from the LAN or is of 
+another network.
+
+So, when a packet is not from that network, this is forwarded to the border Router, that
+then will analyse the source and destination ip address of internal and external network,
+lets take a look at the IP(Internet Protocol) header.
+
+
+    0                   1                   2                   3
+    0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |Version|  IHL  |Type of Service|          Total Length         |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |         Identification        |Flags|      Fragment Offset    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |  Time to Live |    Protocol   |         Header Checksum       |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                       Source Address                          |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Destination Address                        |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+   |                    Options                    |    Padding    |
+   +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+Example Internet Datagram Header ###############RFC 791############
+
+So I look and realize the "Source Address" and "Destination Address" fields are just for what
+I said, then the router table of the Router will look something like this.
+
+ILUSTRATION OF ROUTE TABLE
+|       /========================================================\
+|---|> | SRC LAN            / SRC WAN         ||     DST          |
+|       /========================================================-
+|---|> | 192.168.0.10:17003 / 172.77.22.2     ||  72.63.44.15:80  |
+|       \========================================================/
+
+However before it will be send by the physical layer, it will be encapsulated like this with base in TCP/IP model:
+
+|-- APPLICATION LAYER ->  [HTTP]
+|-- TRANSPORT LAYER   ->  TCP[HTTP]
+|-- INTERNET LAYER    ->  IP[TCP[HTTP]]
+|-- NETWORK ACCESS    ->  PPP(or something like)[IP[TCP[HTTP]]]
+
+lets imagine we want to reach a web server, and that will convert the address name when
+it reaches the DNS server and will return the IP of web site 72.63.44.15
+
+So when this is forwarded by the Router to the network, it will be send by a Routing Protocol
+like OSPF or EIGRP(I'll suppose you know what it is), so when it reaches the network Router
+on DST side the Router will read the src request and forward the packet to the destination HOST
+in the LAN network.
+
+The conclusion is: 
+"network Protocol doesn't forward a packet, just indentify it like an ID card, all forward are 
+did by the Routers, that use a Routing Protocol to build the adjancencies and convergency with other routers,
+using a Routing Protocol".
+
+~ sorry by the not so good english, thats all folks!
