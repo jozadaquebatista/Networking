@@ -54,7 +54,7 @@ However before it will be send by the physical layer, it will be encapsulated li
 |-- INTERNET LAYER    ->  IP[TCP[HTTP]]
 |-- NETWORK ACCESS    ->  PPP(or something like)[IP[TCP[HTTP]]]
 
-lets imagine we want to reach a web server, and that will convert the address name when
+lets imagine we want to reach a web server, and that will convert the address name when typed in the browser
 it reaches the DNS server and will return the IP of web site 72.63.44.15
 
 So when this is forwarded by the Router to the network, it will be send by a Routing Protocol
