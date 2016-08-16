@@ -1,0 +1,46 @@
+BASIC BIT OPERATIONs
+====================
+
+[OPERATION TYPE]
+{binary number}
+------------
+=> (result)
+
+AND
+===
+1011
+1100
+----
+1000
+
+OR
+==
+1011
+0101
+----
+1111
+
+XOR
+===
+1111
+1010
+
+NOT
+1110
+----
+0001
+
+SHIFITING
+=========
+
+@LEFT
+0110 = 6
+----
+1100 = 10
+
+@RIGHT
+0110 = 6
+----
+0011 = 3
+
+more info: https://en.wikipedia.org/wiki/Bitwise_operation#Arithmetic_shift
