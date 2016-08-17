@@ -1,0 +1,20 @@
+Bellow are the main routing protocols.
+
+[ ROUTING PROTOCOLS ]
+.======= ===========. 
+||-- ospf           |
+||------------------|
+||-- eigrp/igrp     |
+||------------------|
+||-- cdp            |
+||------------------|
+||-- bgp            |
+||------------------|
+||-- rip            |
+||------------------|
+||------------------|
+'-------------------'
+
+
+
+more info:  http://www.cisco.com/public/technotes/tech_protocol.shtml
